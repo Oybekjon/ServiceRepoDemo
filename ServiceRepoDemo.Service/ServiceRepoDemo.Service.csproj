@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceRepoDemo.Data\ServiceRepoDemo.Data.csproj" />
+    <ProjectReference Include="..\ServiceRepoDemo.DomainObjects\ServiceRepoDemo.DomainObjects.csproj" />
+  </ItemGroup>
+
+</Project>
