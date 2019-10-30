@@ -25,7 +25,7 @@ namespace ServiceRepoDemo.Web.Controllers
             return View();
         }
 
-        public IActionResult Login(LoginViewModel viewModel)
+        public IActionResult Login([FromBody] LoginViewModel viewModel)
         {
             return Execute(() =>
             {
@@ -55,6 +55,8 @@ namespace ServiceRepoDemo.Web.Controllers
                 _logger.LogDebug("Mismatch", ex);
                 return Json(new { Message = "Passwords dont match" });
             }
+            // SqlServer 
+            // MongoDbException
             catch (DatabaseException ex)
             {
                 _logger.LogError("Database exception", ex);
@@ -69,12 +71,14 @@ namespace ServiceRepoDemo.Web.Controllers
 
         public IActionResult DatabaseError()
         {
-            return View();
+            Response.StatusCode = 500;
+            return Json(new { Message = "Database error" });
         }
 
         public IActionResult ServerError()
         {
-            return View();
+            Response.StatusCode = 500;
+            return Json(new { Message = "Server error" });
         }
     }
 }
