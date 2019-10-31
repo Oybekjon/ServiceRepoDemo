@@ -16,6 +16,12 @@ namespace ServiceRepoDemo.Service.Implementation
         {
             Repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
+
+        public bool ChangePassword(ChangePasswordViewModel viewModel)
+        {
+            throw new NotImplementedException();
+        }
+
         public LoginResultViewModel Login(LoginViewModel viewModel)
         {
             if (viewModel == null)

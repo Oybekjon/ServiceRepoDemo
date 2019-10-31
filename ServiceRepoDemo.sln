@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepoDemo.Web", "ServiceRepoDemo.Web\ServiceRepoDemo.Web.csproj", "{03A036A0-0065-4B68-819F-7BD405B97183}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepoDemo.Web", "ServiceRepoDemo.Web\ServiceRepoDemo.Web.csproj", "{03A036A0-0065-4B68-819F-7BD405B97183}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepoDemo.Service", "ServiceRepoDemo.Service\ServiceRepoDemo.Service.csproj", "{DD55B6C9-972F-4594-9D34-BB56C2A97BE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepoDemo.Service", "ServiceRepoDemo.Service\ServiceRepoDemo.Service.csproj", "{DD55B6C9-972F-4594-9D34-BB56C2A97BE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepoDemo.Data", "ServiceRepoDemo.Data\ServiceRepoDemo.Data.csproj", "{C8AB6EC5-A226-407E-8F6E-2FEF2162A134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepoDemo.Data", "ServiceRepoDemo.Data\ServiceRepoDemo.Data.csproj", "{C8AB6EC5-A226-407E-8F6E-2FEF2162A134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepoDemo.Data.SqlServer", "ServiceRepoDemo.Data.SqlServer\ServiceRepoDemo.Data.SqlServer.csproj", "{226E4BB6-2CFC-4359-8C2E-E933241A549E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepoDemo.Data.SqlServer", "ServiceRepoDemo.Data.SqlServer\ServiceRepoDemo.Data.SqlServer.csproj", "{226E4BB6-2CFC-4359-8C2E-E933241A549E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepoDemo.DomainObjects", "ServiceRepoDemo.DomainObjects\ServiceRepoDemo.DomainObjects.csproj", "{140431AC-0D7A-479D-A3DE-10B90C1B4CD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepoDemo.DomainObjects", "ServiceRepoDemo.DomainObjects\ServiceRepoDemo.DomainObjects.csproj", "{140431AC-0D7A-479D-A3DE-10B90C1B4CD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepoDemo.Services.Test", "ServiceRepoDemo.Services.Test\ServiceRepoDemo.Services.Test.csproj", "{6562DB58-2FBA-46A5-B36B-CF761E6E9AB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{140431AC-0D7A-479D-A3DE-10B90C1B4CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{140431AC-0D7A-479D-A3DE-10B90C1B4CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{140431AC-0D7A-479D-A3DE-10B90C1B4CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6562DB58-2FBA-46A5-B36B-CF761E6E9AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6562DB58-2FBA-46A5-B36B-CF761E6E9AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6562DB58-2FBA-46A5-B36B-CF761E6E9AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6562DB58-2FBA-46A5-B36B-CF761E6E9AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

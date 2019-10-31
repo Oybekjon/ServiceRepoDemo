@@ -12,5 +12,7 @@ namespace ServiceRepoDemo.Service
         /// </summary>
         /// <param name="password"></param>
         void ValidatePassword(string password);
+
+        bool ChangePassword(ChangePasswordViewModel viewModel);
     }
 }
