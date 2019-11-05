@@ -99,8 +99,8 @@ namespace ServiceRepoDemo.Service.Implementation
             else
             {
                 item = Repository.Where(x => x.ItemId == viewModel.ItemId).FirstOrDefault();
-            if (item == null)
-                throw new NotFoundException("No such item");
+                if (item == null)
+                    throw new NotFoundException("No such item");
             }
 
 

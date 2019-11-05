@@ -26,14 +26,31 @@ namespace ServiceRepoDemo.Web.Controllers
                 viewModel.PageSize = 30;
             var result = Service.GetItems(viewModel);
             return new ActionResult<ListViewModel<ItemViewModel>>(result);
-            
+
         }
 
         [HttpPost("")]
         public ActionResult<ItemViewModel> PostItem([FromBody] ItemViewModel viewModel)
         {
+            viewModel.ItemId = null;
             Service.Save(viewModel);
             return new ActionResult<ItemViewModel>(viewModel);
+        }
+
+        [HttpPut("")]
+        public ActionResult<ItemViewModel> PutItem([FromBody] ItemViewModel viewModel)
+        {
+            if (!viewModel.ItemId.HasValue)
+                throw new ArgumentException("You cannot update without ID");
+            Service.Save(viewModel);
+            return new ActionResult<ItemViewModel>(viewModel);
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult<ResultViewModel> DeleteItem(long id)
+        {
+            Service.Delete(id);
+            return new ActionResult<ResultViewModel>(new ResultViewModel(true));
         }
     }
 }
