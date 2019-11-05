@@ -8,6 +8,7 @@ namespace ServiceRepoDemo.Data
     {
         void Add(T entry);
         int SaveChanges();
+        void Delete(T entry);
         IQueryable<T> GetAll();
         IQueryable<T> Where(Expression<Func<T, bool>> predicate);
     }

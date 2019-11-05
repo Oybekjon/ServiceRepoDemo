@@ -14,7 +14,10 @@ namespace ServiceRepoDemo.Web.DependencyInjection
             services.AddDbContext<MainContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<DbContext, MainContext>();
             services.AddScoped<IRepository<User>, Repository<User>>();
+            services.AddScoped<IRepository<Item>, Repository<Item>>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IItemService, ItemService>();
+            
         }
     }
 }

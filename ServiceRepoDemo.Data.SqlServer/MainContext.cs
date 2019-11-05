@@ -11,8 +11,12 @@ namespace ServiceRepoDemo.Data.SqlServer
         public DbSet<User> Users { get; set; }
         public DbSet<Item> Items { get; set; }
 
-        public MainContext() { }
-        public MainContext(DbContextOptions<MainContext> options) : base(options) { }
+        public MainContext() {
+            
+        }
+        public MainContext(DbContextOptions<MainContext> options) : base(options) {
+
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -24,6 +28,7 @@ namespace ServiceRepoDemo.Data.SqlServer
                 .Property(t => t.PasswordHash)
                 .IsRequired()
                 .HasMaxLength(400);
+            
         }
     }
 }

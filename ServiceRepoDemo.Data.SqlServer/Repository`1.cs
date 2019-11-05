@@ -14,12 +14,20 @@ namespace ServiceRepoDemo.Data.SqlServer
             if (context == null)
                 throw new ArgumentNullException(nameof(context));
             Context = context;
+            Context.Database.EnsureCreated();
         }
         public void Add(T entry)
         {
             if (entry == null)
                 throw new ArgumentNullException(nameof(entry));
             Context.Set<T>().Add(entry);
+        }
+
+        public void Delete(T entry)
+        {
+            if (entry == null)
+                throw new ArgumentNullException(nameof(entry));
+            Context.Entry(entry).State = EntityState.Deleted;
         }
 
         public IQueryable<T> GetAll()
